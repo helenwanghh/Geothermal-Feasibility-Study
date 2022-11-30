@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not alter this block (unless you're familiar with LaTeX
+\documentclass{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, fancyhdr, color, comment, graphicx, environ}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+
+\pagestyle{fancy}
+
+
+% \newenvironment{problem}[2][Problem]
+%     { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+%     {  \end{mdframed}}
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=white] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+\newcommand{\pder}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\pdder}[2]{\frac{\partial^2 {#1}}{\partial {#2}^2}}
+\newcommand{\vd}[3]{{#1}_{{#2}}^{({#3})}}
+
+% prevent line break in inline mode
+\binoppenalty=\maxdimen
+\relpenalty=\maxdimen
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+\lhead{Your name: }
+\rhead{ME 144} 
+\chead{\textbf{Final Project 2022}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{mdframed}[backgroundcolor=blue!20]
+Please submit your solution as the downloaded pdf of this document.
+\end{mdframed}
+
+\begin{problem}{1}
+% \textbf{[10pts]} 
+
+The goal of this document is to derive the set of equations that must be solved for the model of the room based on the following assumptions:
+\begin{itemize}
+    \item The temperature of the roof $T_0(t)$ (surface exposed to the outside) is uniform across the surface area of the roof.
+    \item The temperature of the ceiling $T_1(t)$ (surface of the roof exposed to the room) is uniform across the surface area of the ceiling.
+    \item The temperature of the room $T_2(t)$ is defined as its average over the volume of the room $V_{room}$
+    \begin{equation*}
+        T_2(t)=\frac{1}{V_{room}}\iiint_{V_{room}}T(t,x,y,z)dxdydz
+    \end{equation*}
+    \item In the conservation of energy for the room, the thermodynamic properties of the air are evaluated at $T_2(t)$ everywhere throughout the volume of the room
+\end{itemize}
+Based on the conservation of energy applied to a control surface $CS$
+\begin{equation}
+    \iint_{CS}\rho C_p \frac{dT}{dt}dS=\sum E_{in}-\sum E_{out}+ \sum E_g
+\end{equation}
+or a control volume $CV$
+\begin{equation}
+    \iiint_{Cv}\rho C_p \frac{dT}{dt}dV=\sum E_{in}-\sum E_{out}+ \sum E_g
+\end{equation}
+derive the set of equations for ($T_0,T_1,T_2$). For fluxes and heat rates, write them in a compact form such as, $q_{weather}(T_{atm},T_{sky},T_0$ or $q''_{cond}(T_0,T_1)$. \textbf{Your choice of heat flux or heat rate formulation should be consistent with your equations.}
+\end{problem}
+\begin{solution}
+\subsection*{Brief explanation of the different control surface used and why}
+Your text here 
+
+\subsection*{Final equations}
+\begin{eqnarray}
+\frac{dT_0}{dt}&=&...\\
+\frac{dT_1}{dt}&=&...\\
+\frac{dT_2}{dt}&=&...
+\end{eqnarray}
+
+\end{solution}
+
+
+\end{document}
