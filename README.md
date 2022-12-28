@@ -2,9 +2,11 @@
 ---
 
 **Objective**
+
 The objective is to create computational models to study the feasibility and energy cost of using geothermal to supplement the cooling thermal management of buildings on campus (including ice rink)
 
 **Framework**
+
 •	choose to use the type of roof of their building as well as the footprint of the roof. 
 •	The weather data is limited to Burlington Jan 1, 2021 to Dec 31, 2021 (data provided)
 •	Goals:
@@ -16,6 +18,7 @@ The objective is to create computational models to study the feasibility and ene
 
 
  **Assumptions**
+ 
 •	Ground is assumed to be at 10C at 2m deep
 •	Soil can be sand or clay
 •	For the heat exchange between soil and piping study two possibilities: 
