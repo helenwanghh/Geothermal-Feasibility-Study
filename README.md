@@ -1,4 +1,4 @@
-### Geothermal Project
+### Geothermal Project README
 ---
 
 **Objective**
